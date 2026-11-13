@@ -22,22 +22,25 @@ const SYNONYMS = {
   medical: ['medical', 'ill', 'sick', 'bimari', 'bimar', 'fever', 'doctor', 'dawa', 'swasthya', 'hospital', 'chikitsa', 'dispensary'],
   attendance: ['attendance', 'presence', 'upasthiti', 'shortage', 'percentage', '75%', '75 percent', 'kam attendance'],
   certificate: ['certificate', 'bonafide', 'character', 'charitra', 'praman patra', 'document', 'transcript', 'fee receipt'],
-  idcard: ['id card', 'idcard', 'smart card', 'pehechan patra', 'kho gaya', 'lost', 'duplicate', 'rfid'],
+  scholarship: ['scholarship', 'shriram sharma acharya scholarship', 'chhatravritti', 'chatravriti', 'fee waiver', 'concession', 'financial assistance', 'financial aid', 'samaj kalyan', 'nsp'],
+  idcard: ['id card', 'idcard', 'smart card', 'pehechan patra', 'kho gaya', 'lost', 'duplicate', 'rfid', 'parisampatti'],
 
-  // Locations
-  library: ['library', 'pustakalaya', 'books', 'kitab', 'reading room', 'saraswati bhawan', 'study'],
+  // Locations & Bhawans
+  library: ['library', 'pustakalaya', 'books', 'kitab', 'reading room', 'patel bhawan', 'sardar vallabhbhai', 'study'],
   mandir: ['mandir', 'temple', 'mahakal', 'akhand deep', 'jyoti', 'aarti', 'puja', 'yagya', 'prarthana'],
   admin: ['admin', 'office', 'karyalaya', 'registrar', 'dean', 'incharge', 'prashasan', 'enquiry', 'helpdesk'],
   hostel: ['hostel', 'aawas', 'residence', 'room', 'gomti', 'kaveri', 'bhagirathi', 'warden'],
-  lab: ['lab', 'animation', 'vfx', 'computer', 'graphics', 'swadhyay', 'studio', 'editing', 'workstation'],
+  bhawan: ['shriram bhawan', 'chaitanya bhawan', 'patel bhawan', 'sanskriti vibhag', 'mrityunjay', 'sabhagar'],
+  lab: ['lab', 'animation', 'vfx', '3d', 'character design', 'shriram bhawan', 'computer', 'chaitanya bhawan', 'graphics', 'studio'],
   health: ['dispensary', 'hospital', 'clinic', 'arogya', 'brahmavarchas', 'first aid', 'emergency', 'doctor'],
 
   // Events & Activities
   events: ['event', 'activity', 'competition', 'pratiyogita', 'karyakram', 'fest', 'hackathon', 'poster', 'workshop', 'yoga', 'walk', 'debate'],
   sports: ['sports', 'khel', 'khelkood', 'cricket', 'volleyball', 'athletics', 'running', 'badminton', 'gym', 'gymnasium', 'ground', 'tournament', 'match', 'trials', 'khel mahotsav'],
   dignitary: ['mrityunjay', 'sabhagar', 'auditorium', 'convocation', 'dikshant', 'president', 'draupadi murmu', 'droupadi murmu', 'governor', 'cm', 'chief minister', 'vip', 'dignitary'],
-  volunteer: ['volunteer', 'volunteering', 'swayamsevak', 'vip protocol', 'reception', 'seating', 'media team', 'volunteer tasks'],
-  departments: ['it department', 'computer science', 'animation department', 'vfx department', 'english department', 'sports department', 'departmental'],
+  volunteer: ['volunteer', 'volunteering', 'swayamsevak', 'vip protocol', 'reception', 'seating', 'media team', 'volunteer tasks', 'sanskriti vibhag', 'culture department', 'hod'],
+  departments: ['it department', 'computer science', 'animation department', 'vfx department', 'english department', 'sports department', 'departmental', 'bca', 'mca', 'journalism', 'tourism'],
+  faculty: ['faculty', 'teacher', 'professor', 'hod', 'dr abhay saxena', 'shikshak', 'dean', 'mentors'],
 
   // Question Intelligences
   where: ['where', 'kahan', 'kidhar', 'kaha', 'rasta', 'direction', 'location', 'reach'],

@@ -5,17 +5,21 @@ import {
   SEED_CAMPUS_LOCATIONS, 
   SEED_EVENTS, 
   SEED_USERS,
-  SEED_NOTICES 
+  SEED_NOTICES,
+  SEED_FACULTY,
+  SEED_COURSES
 } from '../data/seedData';
 
 const STORAGE_KEYS = {
-  MESS: 'dsvv_saarthi_mess_v3',
-  PROCEDURES: 'dsvv_saarthi_procedures_v3',
-  LOCATIONS: 'dsvv_saarthi_locations_v3',
-  EVENTS: 'dsvv_saarthi_events_v3',
-  NOTICES: 'dsvv_saarthi_notices_v3',
-  REPORTS: 'dsvv_saarthi_reports_v3',
-  AUDIT_LOGS: 'dsvv_saarthi_audit_logs_v3',
+  MESS: 'dsvv_saarthi_mess_v4',
+  PROCEDURES: 'dsvv_saarthi_procedures_v4',
+  LOCATIONS: 'dsvv_saarthi_locations_v4',
+  EVENTS: 'dsvv_saarthi_events_v4',
+  NOTICES: 'dsvv_saarthi_notices_v4',
+  REPORTS: 'dsvv_saarthi_reports_v4',
+  AUDIT_LOGS: 'dsvv_saarthi_audit_logs_v4',
+  FACULTY: 'dsvv_saarthi_faculty_v4',
+  COURSES: 'dsvv_saarthi_courses_v4',
   CURRENT_USER: 'dsvv_saarthi_auth_user',
   ALL_USERS: 'dsvv_saarthi_users'
 };
@@ -270,6 +274,15 @@ export const StorageService = {
     writeStorage(STORAGE_KEYS.EVENTS, events.filter(e => e.id !== id));
     this.recordAuditLog("DELETE", "EVENT", target.title, "Removed university event listing");
     return true;
+  },
+
+  // Faculty and Courses
+  getFaculty() {
+    return readStorage(STORAGE_KEYS.FACULTY, SEED_FACULTY);
+  },
+
+  getCourses() {
+    return readStorage(STORAGE_KEYS.COURSES, SEED_COURSES);
   },
 
   // Notices

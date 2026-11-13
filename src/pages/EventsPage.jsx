@@ -9,7 +9,10 @@ import {
   Tag, 
   Users,
   Search,
-  AlertCircle
+  AlertCircle,
+  X,
+  CheckCircle2,
+  Building2
 } from 'lucide-react';
 import { StorageService } from '../services/storageService';
 
@@ -18,6 +21,7 @@ export default function EventsPage({ lang, onOpenReport }) {
   const [activeTab, setActiveTab] = useState('upcoming'); // upcoming | completed | all
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedEventForModal, setSelectedEventForModal] = useState(null);
 
   const categories = [
     { id: 'all', label: 'All Activities' },
@@ -223,16 +227,8 @@ export default function EventsPage({ lang, onOpenReport }) {
               </span>
               {ev.status === 'upcoming' ? (
                 <button
-                  onClick={() => {
-                    if (ev.volunteerOpportunities) {
-                      alert(`Student Volunteering for ${ev.title}:\nPlease report to the DSW Office / Mrityunjay Sabhagar desk with your student ID card to register your volunteer badge.`);
-                    } else if (ev.category === 'sports') {
-                      alert(`Sports Department Registration:\nPlease report to the Central Sports Pavilion office or connect with your department sports captain.`);
-                    } else {
-                      alert(`Registration details for ${ev.title}:\nPlease visit ${ev.venue} or contact ${ev.organizer}. (Sample registration)`);
-                    }
-                  }}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-dsvv-blue-900 hover:bg-dsvv-blue-800 text-white font-semibold shadow-xs"
+                  onClick={() => setSelectedEventForModal(ev)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-dsvv-blue-900 hover:bg-dsvv-blue-800 text-white font-semibold shadow-xs transition-colors"
                 >
                   <span>{ev.volunteerOpportunities ? 'Apply as Volunteer' : 'Register / Participate'}</span>
                   <ExternalLink size={13} />
@@ -244,6 +240,78 @@ export default function EventsPage({ lang, onOpenReport }) {
           </div>
         ))}
       </div>
+
+      {/* Interactive Registration & Volunteering Guidance Modal */}
+      {selectedEventForModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-100 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+            <div className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3">
+              <div>
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-dsvv-gold-600 bg-dsvv-gold-50 px-2 py-0.5 rounded-full mb-1">
+                  {selectedEventForModal.volunteerOpportunities ? 'Official Volunteering Pathway' : 'Event Registration'}
+                </span>
+                <h3 className="font-bold text-slate-900 text-base leading-snug">
+                  {selectedEventForModal.title}
+                </h3>
+              </div>
+              <button 
+                onClick={() => setSelectedEventForModal(null)}
+                className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="space-y-3 text-xs text-slate-700">
+              <div className="bg-slate-50 border border-slate-200/70 rounded-2xl p-3.5 space-y-2">
+                <div className="flex items-center gap-2 text-dsvv-blue-950 font-bold">
+                  <Building2 size={16} className="text-dsvv-gold-600 shrink-0" />
+                  <span>Where to Apply / Register:</span>
+                </div>
+                <p className="font-semibold text-slate-800 pl-6">
+                  {selectedEventForModal.registrationBuilding || selectedEventForModal.venue}
+                </p>
+                <p className="text-[11px] text-slate-600 pl-6">
+                  {selectedEventForModal.registrationGuide || "Please visit the designated department desk or contact the event coordinator directly."}
+                </p>
+              </div>
+
+              {selectedEventForModal.volunteerOpportunities && (
+                <div className="bg-dsvv-blue-50/60 border border-dsvv-blue-200/70 rounded-2xl p-3.5 space-y-2">
+                  <div className="font-bold text-dsvv-blue-950 flex items-center gap-1.5">
+                    <CheckCircle2 size={14} className="text-dsvv-blue-900" />
+                    <span>3 Official Volunteering Pathways:</span>
+                  </div>
+                  <ul className="list-disc pl-5 space-y-1 text-[11px] text-slate-700">
+                    <li><strong>Path 1 (Department HOD):</strong> Submit your name and volunteer registration slip directly to your Department Head.</li>
+                    <li><strong>Path 2 (Registrar Office):</strong> Submit at the Student Dealing Desks in the Administrative Block.</li>
+                    <li><strong>Path 3 (Culture Department / संस्कृति विभाग):</strong> Submit at the Culture Department desk located in the Administrative Annex.</li>
+                  </ul>
+                  <p className="text-[10px] text-dsvv-blue-800 italic pt-1 border-t border-dsvv-blue-200/60">
+                    * Mandatory rehearsal held at Mrityunjay Sabhagar prior to the ceremonial convocation. White uniform & student RFID card required.
+                  </p>
+                </div>
+              )}
+
+              <div className="space-y-1 text-[11px] text-slate-600 bg-amber-50/70 border border-amber-200/70 rounded-2xl p-3">
+                <p className="font-semibold text-amber-900">Mandatory Checklist for Students:</p>
+                <p>1. Valid University RFID Student ID Card.</p>
+                <p>2. Prescribed university dress code (Kurta-Pyjama/Dhoti for boys, Salwar-Kurta with Dupatta for girls).</p>
+                <p>3. Registration deadline: <strong>{selectedEventForModal.registrationDeadline}</strong>.</p>
+              </div>
+            </div>
+
+            <div className="flex justify-end pt-2">
+              <button
+                onClick={() => setSelectedEventForModal(null)}
+                className="px-5 py-2 rounded-xl bg-dsvv-blue-900 hover:bg-dsvv-blue-800 text-white font-semibold text-xs shadow-xs"
+              >
+                Understood / Got It
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -408,6 +408,69 @@ export const SEED_PROCEDURES = [
     contactPhone: "01334-261303 (Registrar Office Desks)"
   },
   {
+    id: "proc_shriram_scholarship",
+    slug: "shriram-sharma-acharya-scholarship",
+    title: "Pt. Shriram Sharma Acharya Scholarship & Financial Aid",
+    titleHi: "पंडित श्रीराम शर्मा आचार्य छात्रवृत्ति एवं शुल्क सहायता (Scholarship) प्रक्रिया",
+    category: "admission",
+    categoryLabel: "Scholarships & Financial Aid",
+    urgency: "High",
+    responsibleOffice: "Student Welfare Committee & Registrar Office (छात्र कल्याण एवं कुलसचिव कार्यालय)",
+    location: "Administrative Block, DSVV Main Campus",
+    officialNoticeRef: "DSVV/SCHOLARSHIP/PSSSA/2026",
+    verificationStatus: "verified",
+    lastVerifiedDate: "13 Nov 2026",
+    summary: "Institutional scholarship founded in honor of patron founder Pt. Shriram Sharma Acharya to support economically disadvantaged, meritorious, and dedicated students with tuition fee waivers (up to 20%–100%) and research grants.",
+    eligibility: [
+      "Regular enrolled undergraduate, postgraduate, or research (Ph.D.) students of DSVV.",
+      "Demonstrated financial need or high academic merit with no semester backlogs.",
+      "Clean disciplinary record and active participation in university social/spiritual dinacharya.",
+      "Fee concession quota available for international students demonstrating dedication to Gayatri Parivar mission ethos."
+    ],
+    requiredDocuments: [
+      "Formal handwritten or typed application addressed to 'The Registrar / Hon'ble Vice-Chancellor, DSVV'",
+      "Valid Income Certificate issued by competent government authority (Tehsildar/SDM) or family income declaration",
+      "Academic marksheets of previous qualifying examination/semester",
+      "Recommendation note / signature from respective Department Head (HOD) or Class Mentor",
+      "Copy of University Student Identity Card and current semester fee deposit receipt"
+    ],
+    steps: [
+      {
+        stepNumber: 1,
+        title: "Draft Application to Vice-Chancellor / Registrar Sir",
+        description: "Write a formal application explaining your academic enrollment (Course, Semester, Roll Number), family financial circumstances, and specific request for Pt. Shriram Sharma Acharya fee assistance.",
+        tips: "Highlight any extracurricular involvement, voluntary seva, or academic achievements."
+      },
+      {
+        stepNumber: 2,
+        title: "Obtain HOD Recommendation",
+        description: "Take the application and your semester marksheets to your Department Head (HOD). The HOD assesses your academic sincerity, attendance, and forwards the application with their official recommendation signature.",
+        tips: "Ensure your attendance is above the mandatory 75% threshold."
+      },
+      {
+        stepNumber: 3,
+        title: "Submit at Registrar Office Student Section",
+        description: "Submit the endorsed dossier (Application + Income Certificate + Marksheets + ID Copy) at the student dealing desk in the Administrative Block. Collect an acknowledgement receipt / diary number.",
+        tips: "Submit well before semester fee deadlines announced in the academic calendar."
+      },
+      {
+        stepNumber: 4,
+        title: "Committee Evaluation & Personal Interview",
+        description: "The University Scholarship & Financial Aid Committee reviews all applications and invites shortlisted candidates for a personal interaction to assess genuine need and commitment.",
+        tips: "Be transparent and honest about your family circumstances during the interaction."
+      },
+      {
+        stepNumber: 5,
+        title: "Award Notification & Fee Adjustment",
+        description: "Upon committee approval, the scholarship sanction order is issued. The sanctioned fee waiver or scholarship amount is directly adjusted against your semester tuition or credited to your student account.",
+        tips: "Collect your sanctioned fee adjustment receipt from the Account Office for your records."
+      }
+    ],
+    contactPerson: "Scholarship & Student Welfare Coordinator, Registrar Office",
+    contactEmail: "scholarships@dsvv.ac.in",
+    contactPhone: "01334-261303 (Ext. 204)"
+  },
+  {
     id: "proc_id_loss",
     slug: "duplicate-id-card",
     title: "Procedure for Lost ID Card & Duplicate Issuance (Parisampatti Vibhag)",
@@ -567,16 +630,16 @@ export const SEED_PROCEDURES = [
 export const SEED_CAMPUS_LOCATIONS = [
   {
     id: "loc_library",
-    nameEn: "Saraswati Bhawan — Central Library",
-    nameHi: "सरस्वती भवन — केंद्रीय पुस्तकालय",
+    nameEn: "Central Library (Sardar Vallabhbhai Patel Bhawan)",
+    nameHi: "केंद्रीय पुस्तकालय (सरदार वल्लभभाई पटेल भवन)",
     category: "academic",
     categoryLabel: "Academic & Research",
-    building: "Saraswati Bhawan",
-    floor: "Ground, 1st & 2nd Floor",
+    building: "Sardar Vallabhbhai Patel Bhawan",
+    floor: "Dedicated Floors, Patel Bhawan",
     timings: "09:00 AM – 07:00 PM (Mon - Sat)",
-    description: "Multi-storey modern library housing over 70,000 volumes, rare spiritual manuscripts, digital research labs, e-journals, and peaceful silent reading zones.",
+    description: "Modern university central library located inside Sardar Vallabhbhai Patel Bhawan, housing over 70,000 volumes, rare Vedic manuscripts, digital research terminals, e-journals, and peaceful silent reading zones.",
     facilities: ["High-speed Wi-Fi", "Digital Thesis Repository", "Photocopy Service", "Spiritual Literature Corner"],
-    directions: "Enter through the university main arch, walk past the fountain quadrangle. Saraswati Bhawan is situated on the northern flank facing Mahakal Mandir.",
+    directions: "Located inside Sardar Vallabhbhai Patel Bhawan; follow the signage from the main foyer.",
     contact: "library@dsvv.ac.in",
     isVerified: true
   },
@@ -611,18 +674,48 @@ export const SEED_CAMPUS_LOCATIONS = [
     isVerified: true
   },
   {
-    id: "loc_swadhyay",
-    nameEn: "Swadhyay & Multimedia Complex (Animation & VFX Labs)",
-    nameHi: "स्वाध्याय एवं मल्टीमीडिया केंद्र (एनीमेशन व वीएफएक्स लैब)",
+    id: "loc_shriram_bhawan",
+    nameEn: "Shriram Bhawan (Department of Animation & Visual Effects)",
+    nameHi: "श्रीराम भवन (एनीमेशन एवं विजुअल इफेक्ट्स विभाग)",
     category: "academic",
     categoryLabel: "Academic & Tech",
-    building: "Vivekananda Block",
-    floor: "2nd Floor",
+    building: "Shriram Bhawan",
+    floor: "Dedicated Independent Building",
     timings: "08:30 AM – 06:30 PM",
-    description: "High-performance graphics workstations equipped with animation software, digital sound-recording booths, and video editing suites for student media projects.",
-    facilities: ["GPU Workstations", "Green Screen Studio", "Sound Lab", "Render Farm Access"],
-    directions: "Inside Vivekananda Block, take stairway 'B' to the second floor, wing right.",
-    contact: "media@dsvv.ac.in",
+    description: "The dedicated creative home of the Department of Animation & Visual Effects at DSVV. Houses advanced 3D character modeling labs, high-end VFX compositing suites, green screen studios, digital audio dubbing booths, and showreel review theaters for B.Sc. and M.Sc. Animation students.",
+    facilities: ["High-End GPU VFX Workstations", "3D Animation Labs (Maya/Blender)", "Chroma Studio (Green Screen)", "Sound Dubbing & Editing Suite", "Student Portfolio & Showreel Room"],
+    directions: "Distinct academic building situated near the central quadrangle; inquire directly at the Shriram Bhawan entrance foyer for animation department faculty and labs.",
+    contact: "animation@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_chaitanya_bhawan",
+    nameEn: "Chaitanya Bhawan (Computer Sciences, IT & Media)",
+    nameHi: "चैतन्य भवन (कंप्यूटर विज्ञान, आईटी एवं जनसंचार विभाग)",
+    category: "academic",
+    categoryLabel: "Academic & Tech",
+    building: "Chaitanya Bhawan",
+    floor: "Multi-Storey Academic Block",
+    timings: "08:30 AM – 06:00 PM",
+    description: "Major academic center housing the Department of Computer Sciences & IT (BCA, MCA, B.Sc./M.Sc. Computer Science) and the Department of Journalism & Mass Communication (BJMC, MJMC). Equipped with programming software labs, web development terminals, and media editing suites.",
+    facilities: ["BCA/MCA Programming Labs", "Advanced IT Server Room", "Journalism Media Editing Suite", "Smart Lecture Theaters", "Department HOD Offices"],
+    directions: "Prominent academic bhawan near the central lawn; ground and first floors house Computer Science and Media departments.",
+    contact: "computerscience@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_sanskriti_vibhag",
+    nameEn: "Culture Department (संस्कृति विभाग & Student Volunteering)",
+    nameHi: "संस्कृति विभाग (छात्र स्वयंसेवक समन्वय एवं सांस्कृतिक प्रभाग)",
+    category: "cultural",
+    categoryLabel: "Culture & Volunteering",
+    building: "Administrative & Cultural Annex",
+    floor: "Ground Floor",
+    timings: "09:30 AM – 05:00 PM",
+    description: "The official nodal department responsible for organizing university cultural functions, morning prayers and assemblies, spiritual festivals, and coordinating verified student volunteers for grand convocations and VIP dignitary visits in Mrityunjay Sabhagar.",
+    facilities: ["Volunteer Accreditation Counter", "Cultural Program Desk", "Ceremonial Regalia Store", "Stage Performance Coordination"],
+    directions: "Located within the cultural wing adjacent to the main Administrative Block and Mrityunjay Sabhagar foyer.",
+    contact: "culture@dsvv.ac.in",
     isVerified: true
   },
   {
@@ -642,17 +735,32 @@ export const SEED_CAMPUS_LOCATIONS = [
   },
   {
     id: "loc_mrityunjay_sabhagar",
-    nameEn: "Mrityunjay Sabhagar (Central University Auditorium)",
-    nameHi: "मृत्युंजय सभागार (मुख्य विश्वविद्यालय प्रेक्षागृह)",
+    nameEn: "Mrityunjay Sabhagar (Dev Sanskriti Sabhagar / Auditorium)",
+    nameHi: "मृत्युंजय सभागार (देव संस्कृति प्रेक्षागृह)",
     category: "cultural",
     categoryLabel: "Auditorium & Conventions",
     building: "Mrityunjay Cultural & Convention Center",
-    floor: "Main Auditorium Hall",
+    floor: "Main Ceremonial Auditorium Hall",
     timings: "Event-based | Office: 09:00 AM – 05:30 PM",
-    description: "The grand ceremonial auditorium of Dev Sanskriti Vishwavidyalaya with a seating capacity of over 1,500. Venue for annual convocations, national seminars, international cultural festivals, and addresses by national dignitaries such as the President of India, Governor, and Chief Minister.",
+    description: "The grand ceremonial auditorium (Dev Sanskriti Sabhagar) of Dev Sanskriti Vishwavidyalaya with a seating capacity of over 1,500. Venue for annual convocations, national seminars, international cultural festivals, and addresses by national dignitaries such as the President of India, Governor, and Chief Minister.",
     facilities: ["1,500+ Seating Capacity", "Acoustic Surround Audio", "VIP Green Rooms", "Live Broadcast Control Room", "Central Air-Conditioning"],
-    directions: "Situated along the main ceremonial quadrangle, adjacent to the central administration park.",
+    directions: "Situated along the main ceremonial quadrangle, facing the university grand avenue.",
     contact: "events@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_yoga_bhawan",
+    nameEn: "Sardar Patel & Yoga Bhawan (Yogic Science & Holistic Health)",
+    nameHi: "सरदार पटेल एवं योग भवन (योग विज्ञान एवं मानव चेतना विभाग)",
+    category: "academic",
+    categoryLabel: "Yoga & Spiritual Science",
+    building: "Sardar Vallabhbhai Patel Bhawan",
+    floor: "Ground & 1st Floor Halls",
+    timings: "05:30 AM – 07:00 PM",
+    description: "The spiritual and therapeutic heart of DSVV, hosting the Department of Yogic Science and Human Consciousness. Houses expansive sattvik yoga practice halls, meditation chambers, Shatkarma purification spaces, and research facilities for B.Sc., M.Sc., and PGDYT yoga programs.",
+    facilities: ["Spacious Wooden Yoga Practice Halls", "Meditation & Nada Yoga Sanctuary", "Shatkarma Kriya Therapy Area", "Department HOD & Faculty Consultation"],
+    directions: "Located towards the peaceful eastern side of campus, adjacent to the herbal gardens and yagyashala.",
+    contact: "yoga@dsvv.ac.in",
     isVerified: true
   },
   {
@@ -707,9 +815,11 @@ export const SEED_EVENTS = [
       "Auditorium Seating & Discipline (12 Volunteers)",
       "Live Media Streaming & Press Liaison (10 Volunteers)"
     ],
-    volunteerInfo: "Open for 40 verified student volunteers. Orientation and full-dress rehearsal at Mrityunjay Sabhagar 2 days prior to the event. Official Certificate of Appreciation awarded.",
+    volunteerInfo: "Open for verified student volunteers. To apply, submit your registration through: 1) Your Department HOD, 2) Registrar Office, or 3) Culture Department (संस्कृति विभाग). Mandatory rehearsal at Mrityunjay Sabhagar.",
     prizes: "Official University Certificate of Volunteer Honor & Security Accreditation Pass",
     registrationLink: "#volunteer-mrityunjay",
+    registrationBuilding: "Culture Department (संस्कृति विभाग) & Registrar Office",
+    registrationGuide: "Submit your volunteer form endorsed by your Department HOD at either the Registrar Office or Culture Department counter. Full dress rehearsal at Mrityunjay Sabhagar.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -735,6 +845,8 @@ export const SEED_EVENTS = [
     volunteerInfo: "Students can register as athletes with their Department Sports Captain or volunteer as ground marshals with the Sports Officer.",
     prizes: "Medals, Rolling University Trophy & Merit Sports Certificates",
     registrationLink: "#sports-khel-mahotsav",
+    registrationBuilding: "DSVV Sports Complex & Central Pavilion",
+    registrationGuide: "Report to the Sports Department Office at the Central Pavilion or register directly with your class/department Sports Captain.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -750,10 +862,12 @@ export const SEED_EVENTS = [
     organizer: "Department of Animation and Visual Effects",
     eventDate: getDateStr(6),
     registrationDeadline: getDateStr(3),
-    venue: "Swadhyay Multimedia Complex & Mrityunjay Sabhagar Mini Hall",
+    venue: "Shriram Bhawan (श्रीराम भवन) — Department of Animation & VFX",
     description: "Creative student showcase judged by industry visual artists. Submissions open for 3D Character Modeling, Motion Graphics, VFX Compositing, and 2D Storyboarding based on Indian mythology and cultural themes.",
     prizes: "High-end Graphic Tablets, Industry Studio Internships & Trophies",
     registrationLink: "#demo-register-vfx",
+    registrationBuilding: "Shriram Bhawan (श्रीराम भवन) — Ground Floor Animation Lab",
+    registrationGuide: "Visit the Department of Animation & Visual Effects located in Shriram Bhawan. Submit your showreel file or character design portfolio directly to the department desk / faculty coordinator.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -769,10 +883,12 @@ export const SEED_EVENTS = [
     organizer: "Department of Computer Science & IT",
     eventDate: getDateStr(5),
     registrationDeadline: getDateStr(2),
-    venue: "Vivekananda Computer Center, Lab 3",
+    venue: "Chaitanya Bhawan (चैतन्य भवन) — Computer Science Lab 2 & 3",
     description: "A 24-hour coding challenge for students to build software utilities, student apps, and AI/web applications solving daily campus and ecological challenges.",
     prizes: "Cash Grants, Innovation Trophies & Incubation Support",
     registrationLink: "#demo-register-hackathon",
+    registrationBuilding: "Chaitanya Bhawan (चैतन्य भवन) — Computer Science & IT Dept",
+    registrationGuide: "Visit the Department of Computer Science & IT located in Chaitanya Bhawan. Register your team (2-4 students) with the faculty coordinator or HOD office.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -792,6 +908,8 @@ export const SEED_EVENTS = [
     description: "Debate tournament deliberating on 'Technology, Artificial Intelligence, and Human Ethics in the 21st Century'. Open to undergraduate and postgraduate speakers.",
     prizes: "Best Speaker Trophy, Oxford Literary Sets & Cash Prizes",
     registrationLink: "#demo-register-english",
+    registrationBuilding: "Chanakya Bhawan, Ground Floor (English Dept)",
+    registrationGuide: "Submit speaker names at the Department of English office in Chanakya Bhawan or email debate.english@dsvv.ac.in.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -805,10 +923,12 @@ export const SEED_EVENTS = [
     organizer: "School of Yogic Science & Human Excellence",
     eventDate: getDateStr(14),
     registrationDeadline: getDateStr(11),
-    venue: "Patanjali Yagya & Yoga Mandapam",
+    venue: "Sardar Patel & Yoga Bhawan (सरदार पटेल एवं योग भवन)",
     description: "Specialized practical sessions in Pranayama, Shatkarma detox techniques, and Nada Yoga for mental focus and academic stress reduction.",
     prizes: "Certified Yoga Hours Certificate",
     registrationLink: "#demo-register-yoga",
+    registrationBuilding: "Sardar Patel & Yoga Bhawan — Yoga Department Desk",
+    registrationGuide: "Register at the Yoga Department reception desk in Sardar Patel Bhawan with your student ID card.",
     status: "upcoming",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -819,13 +939,15 @@ export const SEED_EVENTS = [
     titleHi: "परिसर जैव-विविधता व धरोहर फोटोग्राफी वॉक",
     category: "photography",
     categoryLabel: "Photography",
-    organizer: "Nature Club & Media Society",
+    organizer: "Department of Journalism & Mass Communication",
     eventDate: getDateStr(-2),
     registrationDeadline: getDateStr(-5),
-    venue: "Smriti Upavan & Herbal Garden",
+    venue: "Chaitanya Bhawan (चैतन्य भवन) — Journalism & Media Studio",
     description: "Early morning photowalk capturing migratory Himalayan birds, medicinal plants, and architectural highlights of DSVV.",
     prizes: "Winning photos featured in the Annual University Calendar",
     registrationLink: "#demo-photography",
+    registrationBuilding: "Chaitanya Bhawan (चैतन्य भवन) — Journalism Department",
+    registrationGuide: "Submit your high-resolution photo entries on a pendrive or email at the Department of Journalism & Mass Communication in Chaitanya Bhawan.",
     status: "completed",
     verified: true,
     lastUpdated: new Date().toLocaleDateString("en-IN")
@@ -850,5 +972,375 @@ export const SEED_NOTICES = [
     priority: "medium",
     body: "Breakfast will be served from 07:45 AM instead of 07:30 AM starting from next Monday due to morning fog and meditation prayer schedule.",
     source: "Chief Mess Warden"
+  }
+];
+
+export const SEED_FACULTY = [
+  // Computer Science & IT
+  {
+    id: "fac_cs_01",
+    nameEn: "Dr. Abhay Saxena",
+    nameHi: "डॉ. अभय सक्सेना",
+    designationEn: "Dean, Faculty of Technology & Head of Department",
+    designationHi: "संकायाध्यक्ष (प्रौद्योगिकी संकाय) एवं विभागाध्यक्ष",
+    departmentId: "cs_it",
+    departmentEn: "Department of Computer Sciences & IT",
+    departmentHi: "कंप्यूटर विज्ञान एवं आईटी विभाग",
+    qualification: "Ph.D. (Computer Science), M.Tech",
+    specialization: "Artificial Intelligence, Big Data, Vedic Computing & Systems",
+    officeLocation: "Chaitanya Bhawan, 2nd Floor, Room 201",
+    email: "abhay.saxena@dsvv.ac.in"
+  },
+  {
+    id: "fac_cs_02",
+    nameEn: "Dr. Rajeshwari Sharma",
+    nameHi: "डॉ. राजेश्वरी शर्मा",
+    designationEn: "Associate Professor",
+    designationHi: "सह-आचार्य (एसोसिएट प्रोफेसर)",
+    departmentId: "cs_it",
+    departmentEn: "Department of Computer Sciences & IT",
+    departmentHi: "कंप्यूटर विज्ञान एवं आईटी विभाग",
+    qualification: "Ph.D. (CS), MCA",
+    specialization: "Web Technologies, Database Management & Cloud Architecture",
+    officeLocation: "Chaitanya Bhawan, 2nd Floor, Room 205",
+    email: "rajeshwari.sharma@dsvv.ac.in"
+  },
+
+  // Animation & Visual Effects
+  {
+    id: "fac_vfx_01",
+    nameEn: "Prof. Gaurav Sharma",
+    nameHi: "प्रो. गौरव शर्मा",
+    designationEn: "Lead Faculty & VFX Lab Coordinator",
+    designationHi: "वरिष्ठ प्राध्यापक एवं वीएफएक्स लैब समन्वयक",
+    departmentId: "animation_vfx",
+    departmentEn: "Department of Animation & Visual Effects",
+    departmentHi: "एनीमेशन एवं विजुअल इफेक्ट्स (VFX) विभाग",
+    qualification: "Master of Fine Arts (Animation), Industry VFX Specialist",
+    specialization: "3D Character Modeling, Maya, Blender & Cinematic Lighting",
+    officeLocation: "Shriram Bhawan (श्रीराम भवन), Animation Studio Wing",
+    email: "gaurav.sharma@dsvv.ac.in"
+  },
+  {
+    id: "fac_vfx_02",
+    nameEn: "Dr. Priya Rawat",
+    nameHi: "डॉ. प्रिया रावत",
+    designationEn: "Assistant Professor",
+    designationHi: "सहायक आचार्य (असिस्टेंट प्रोफेसर)",
+    departmentId: "animation_vfx",
+    departmentEn: "Department of Animation & Visual Effects",
+    departmentHi: "एनीमेशन एवं विजुअल इफेक्ट्स (VFX) विभाग",
+    qualification: "Ph.D. in Digital Media, M.Sc. Animation",
+    specialization: "Digital Illustration, Motion Graphics & Storyboarding",
+    officeLocation: "Shriram Bhawan (श्रीराम भवन), 3D Modeling Lab",
+    email: "priya.rawat@dsvv.ac.in"
+  },
+
+  // Yogic Science & Human Consciousness
+  {
+    id: "fac_yoga_01",
+    nameEn: "Dr. S.L. Barnawal",
+    nameHi: "डॉ. एस.एल. बरनवाल",
+    designationEn: "Senior Professor & Former Dean",
+    designationHi: "वरिष्ठ आचार्य एवं पूर्व संकायाध्यक्ष",
+    departmentId: "yoga",
+    departmentEn: "Department of Yogic Science & Human Consciousness",
+    departmentHi: "योग विज्ञान एवं मानव चेतना विभाग",
+    qualification: "Ph.D. in Yogic Science, M.Sc. Yoga",
+    specialization: "Therapeutic Yoga, Shatkarma, Asana & Pranayama Physiology",
+    officeLocation: "Sardar Patel & Yoga Bhawan, 1st Floor",
+    email: "sl.barnawal@dsvv.ac.in"
+  },
+  {
+    id: "fac_yoga_02",
+    nameEn: "Dr. Kamakhya Kumar",
+    nameHi: "डॉ. कामाख्या कुमार",
+    designationEn: "Associate Professor & Research Guide",
+    designationHi: "सह-आचार्य एवं शोध निदेशक",
+    departmentId: "yoga",
+    departmentEn: "Department of Yogic Science & Human Consciousness",
+    departmentHi: "योग विज्ञान एवं मानव चेतना विभाग",
+    qualification: "Ph.D. (Yogic Science), PGDYT",
+    specialization: "Yoga Nidra, Psychophysiology of Meditation & Stress Reduction",
+    officeLocation: "Sardar Patel & Yoga Bhawan, Research Wing",
+    email: "kamakhya.kumar@dsvv.ac.in"
+  },
+
+  // Ayurveda & Holistic Health
+  {
+    id: "fac_ayur_01",
+    nameEn: "Dr. Vandana Shrivastava",
+    nameHi: "डॉ. वंदना श्रीवास्तव",
+    designationEn: "Associate Professor & Head of Department",
+    designationHi: "सह-आचार्य एवं विभागाध्यक्ष",
+    departmentId: "ayurveda",
+    departmentEn: "Department of Ayurved & Holistic Health",
+    departmentHi: "आयुर्वेद एवं समग्र स्वास्थ्य विभाग",
+    qualification: "BAMS, MD (Ayurveda), Ph.D.",
+    specialization: "Ayurvedic Therapeutics, Yagyopathy & Holistic Nutrition",
+    officeLocation: "Charak Ayur Bhawan, Room 102",
+    email: "vandana.shrivastava@dsvv.ac.in"
+  },
+  {
+    id: "fac_ayur_02",
+    nameEn: "Dr. Alka Mishra",
+    nameHi: "डॉ. अलका मिश्रा",
+    designationEn: "Assistant Professor & Coordinator, Panchakarma",
+    designationHi: "सहायक आचार्य एवं पंचकर्म समन्वयक",
+    departmentId: "ayurveda",
+    departmentEn: "Department of Ayurved & Holistic Health",
+    departmentHi: "आयुर्वेद एवं समग्र स्वास्थ्य विभाग",
+    qualification: "BAMS, MD (Panchakarma)",
+    specialization: "Panchakarma Detoxification, Pulse Diagnosis & Herbal Pharmacology",
+    officeLocation: "Brahmavarchas Holistic Wellness Wing",
+    email: "alka.mishra@dsvv.ac.in"
+  },
+
+  // Psychology
+  {
+    id: "fac_psy_01",
+    nameEn: "Prof. Hemadri Sao",
+    nameHi: "प्रो. हेमाद्री साव",
+    designationEn: "Dean, Faculty of Humanities & Senior Professor",
+    designationHi: "संकायाध्यक्ष (मानविकी संकाय) एवं वरिष्ठ आचार्य",
+    departmentId: "psychology",
+    departmentEn: "Department of Psychology",
+    departmentHi: "मनोविज्ञान विभाग",
+    qualification: "Ph.D., M.A. (Psychology)",
+    specialization: "Clinical Psychology, Counseling, Spiritual Psychology",
+    officeLocation: "Humanities Block, 1st Floor, Room 112",
+    email: "hemadri.sao@dsvv.ac.in"
+  },
+  {
+    id: "fac_psy_02",
+    nameEn: "Dr. Santosh Vishwakarma",
+    nameHi: "डॉ. संतोष विश्वकर्मा",
+    designationEn: "Officiating Head of Department & Assistant Professor",
+    designationHi: "कार्यवाहक विभागाध्यक्ष एवं सहायक आचार्य",
+    departmentId: "psychology",
+    departmentEn: "Department of Psychology",
+    departmentHi: "मनोविज्ञान विभाग",
+    qualification: "Ph.D. (Psychology)",
+    specialization: "Cognitive Psychology, Youth Mental Health & Positive Psychology",
+    officeLocation: "Humanities Block, Room 115",
+    email: "santosh.v@dsvv.ac.in"
+  },
+
+  // English & Languages
+  {
+    id: "fac_eng_01",
+    nameEn: "Dr. Sandeep Kumar",
+    nameHi: "डॉ. संदीप कुमार",
+    designationEn: "Head of Department & Associate Professor",
+    designationHi: "विभागाध्यक्ष एवं सह-आचार्य",
+    departmentId: "english",
+    departmentEn: "Department of English & Linguistics",
+    departmentHi: "अंग्रेजी एवं भाषा विज्ञान विभाग",
+    qualification: "Ph.D. (English Literature), UGC-NET",
+    specialization: "Indian Writing in English, Literary Criticism & Soft Skills",
+    officeLocation: "Chanakya Bhawan, Ground Floor, Room 103",
+    email: "sandeep.kumar@dsvv.ac.in"
+  },
+
+  // Journalism & Mass Communication
+  {
+    id: "fac_jour_01",
+    nameEn: "Dr. Sukhnandan Singh",
+    nameHi: "डॉ. सुखनंदन सिंह",
+    designationEn: "Associate Professor & Head of Department",
+    designationHi: "सह-आचार्य एवं विभागाध्यक्ष",
+    departmentId: "journalism",
+    departmentEn: "Department of Journalism & Mass Communication",
+    departmentHi: "पत्रकारिता एवं जनसंचार विभाग",
+    qualification: "Ph.D., MJMC",
+    specialization: "Broadcast Journalism, Developmental Media & Media Ethics",
+    officeLocation: "Narad Media Center, Ground Floor",
+    email: "sukhnandan.singh@dsvv.ac.in"
+  },
+
+  // Tourism Management
+  {
+    id: "fac_tour_01",
+    nameEn: "Dr. Umakant Indolia",
+    nameHi: "डॉ. उमाकांत इंदौलिया",
+    designationEn: "Assistant Professor & Program Coordinator",
+    designationHi: "सहायक आचार्य एवं पाठ्यक्रम समन्वयक",
+    departmentId: "tourism",
+    departmentEn: "Department of Tourism Management",
+    departmentHi: "पर्यटन प्रबंधन विभाग",
+    qualification: "Ph.D. (Tourism), MBA (Tourism)",
+    specialization: "Spiritual Tourism, Himalayan Heritage Trails & Hospitality Ops",
+    officeLocation: "Chanakya Bhawan, Room 108",
+    email: "umakant.indolia@dsvv.ac.in"
+  }
+];
+
+export const SEED_COURSES = [
+  // Animation & VFX
+  {
+    id: "crs_bsc_anim",
+    titleEn: "B.Sc. in Animation & Visual Effects",
+    titleHi: "बी.एससी. एनीमेशन एवं विजुअल इफेक्ट्स (3-वर्षीय)",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "animation_vfx",
+    departmentEn: "Department of Animation & Visual Effects",
+    building: "Shriram Bhawan (श्रीराम भवन)",
+    eligibility: "10+2 in any stream with minimum 50% marks + DSVV Entrance Exam & Interview",
+    highlights: "3D Character Modeling, Rigging, Texturing, VFX Compositing, Maya, Blender, Unreal Engine & Showreel Development."
+  },
+  {
+    id: "crs_msc_anim",
+    titleEn: "M.Sc. in Animation & Visual Effects",
+    titleHi: "एम.एससी. एनीमेशन एवं विजुअल इफेक्ट्स (2-वर्षीय)",
+    degree: "Postgraduate (PG)",
+    duration: "2 Years (4 Semesters)",
+    departmentId: "animation_vfx",
+    departmentEn: "Department of Animation & Visual Effects",
+    building: "Shriram Bhawan (श्रीराम भवन)",
+    eligibility: "Bachelor degree in Animation, Multimedia, Fine Arts, or relevant graduate discipline with portfolio",
+    highlights: "Advanced CGI, Motion Graphics, Film Aesthetics, Cinematography, Sound Engineering & Thesis Production."
+  },
+
+  // Computer Science & IT
+  {
+    id: "crs_bca",
+    titleEn: "BCA (Bachelor of Computer Applications)",
+    titleHi: "बीसीए (कंप्यूटर अनुप्रयोग स्नातक)",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "cs_it",
+    departmentEn: "Department of Computer Sciences & IT",
+    building: "Chaitanya Bhawan (चैतन्य भवन)",
+    eligibility: "10+2 with Mathematics/Computer Science or equivalent with 50% aggregate",
+    highlights: "Data Structures, Full-Stack Web Development, Java/Python, Database Systems, Cloud Computing & Industrial Training."
+  },
+  {
+    id: "crs_mca",
+    titleEn: "MCA (Master of Computer Applications)",
+    titleHi: "एमसीए (कंप्यूटर अनुप्रयोग स्नातकोत्तर)",
+    degree: "Postgraduate (PG)",
+    duration: "2 Years (4 Semesters)",
+    departmentId: "cs_it",
+    departmentEn: "Department of Computer Sciences & IT",
+    building: "Chaitanya Bhawan (चैतन्य भवन)",
+    eligibility: "BCA / B.Sc. (CS/IT) / B.Tech or Graduate with Mathematics at 10+2 / Graduation level",
+    highlights: "Artificial Intelligence, Machine Learning, Vedic Computing Algorithms, Cyber Security & Live Capstone Project."
+  },
+  {
+    id: "crs_bsc_cs",
+    titleEn: "B.Sc. (Hons) in Computer Science & Data Science",
+    titleHi: "बी.एससी. (ऑनर्स) कंप्यूटर विज्ञान व डेटा साइंस",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "cs_it",
+    departmentEn: "Department of Computer Sciences & IT",
+    building: "Chaitanya Bhawan (चैतन्य भवन)",
+    eligibility: "10+2 with Science stream (Mathematics required) with min 50% marks",
+    highlights: "Scientific Computing, Statistical Modeling, Python for AI, Algorithms & Research Foundation."
+  },
+
+  // Yogic Science
+  {
+    id: "crs_bsc_yoga",
+    titleEn: "B.Sc. in Yogic Science & Human Consciousness",
+    titleHi: "बी.एससी. योग विज्ञान एवं मानव चेतना",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "yoga",
+    departmentEn: "Department of Yogic Science & Human Consciousness",
+    building: "Sardar Patel & Yoga Bhawan (सरदार पटेल एवं योग भवन)",
+    eligibility: "10+2 in any stream (Science preferred) with minimum 50% marks",
+    highlights: "Yogic Anatomy & Physiology, Classical Asana & Pranayama, Shatkarma Kriyas, Yoga Therapy & Internship."
+  },
+  {
+    id: "crs_msc_yoga",
+    titleEn: "M.Sc. / M.A. in Yogic Science & Human Consciousness",
+    titleHi: "एम.एससी. / एम.ए. योग विज्ञान एवं मानव चेतना",
+    degree: "Postgraduate (PG)",
+    duration: "2 Years (4 Semesters)",
+    departmentId: "yoga",
+    departmentEn: "Department of Yogic Science & Human Consciousness",
+    building: "Sardar Patel & Yoga Bhawan (सरदार पटेल एवं योग भवन)",
+    eligibility: "Graduation in any discipline with min 50% marks (Yoga background preferred)",
+    highlights: "Patanjali Yoga Sutras, Hatha Yoga Pradipika, Therapeutic Yoga Clinical Protocols, Psychophysiology & Research Thesis."
+  },
+  {
+    id: "crs_pgyt",
+    titleEn: "PGDYT (Post Graduate Diploma in Yoga Therapy)",
+    titleHi: "पीजीडीवायटी (योग थेरेपी में स्नातकोत्तर डिप्लोमा)",
+    degree: "Diploma",
+    duration: "1 Year (2 Semesters)",
+    departmentId: "yoga",
+    departmentEn: "Department of Yogic Science & Human Consciousness",
+    building: "Sardar Patel & Yoga Bhawan (सरदार पटेल एवं योग भवन)",
+    eligibility: "Bachelor's degree in any stream",
+    highlights: "Clinical Yoga Applications, Lifestyle Disorder Management, Naturopathy integration & Hospital Training."
+  },
+
+  // Journalism & Mass Communication
+  {
+    id: "crs_bjmc",
+    titleEn: "B.A. in Journalism & Mass Communication (BJMC)",
+    titleHi: "बी.ए. पत्रकारिता एवं जनसंचार (BJMC)",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "journalism",
+    departmentEn: "Department of Journalism & Mass Communication",
+    building: "Chaitanya Bhawan (चैतन्य भवन)",
+    eligibility: "10+2 in any stream with minimum 50% marks + entrance evaluation",
+    highlights: "Print Journalism, Electronic Media, TV News Production, Radio Jockeying, Media Ethics & Camera Operations."
+  },
+  {
+    id: "crs_mjmc",
+    titleEn: "M.A. in Journalism & Mass Communication (MJMC)",
+    titleHi: "एम.ए. पत्रकारिता एवं जनसंचार (MJMC)",
+    degree: "Postgraduate (PG)",
+    duration: "2 Years (4 Semesters)",
+    departmentId: "journalism",
+    departmentEn: "Department of Journalism & Mass Communication",
+    building: "Chaitanya Bhawan (चैतन्य भवन)",
+    eligibility: "Bachelor degree in any stream with min 50% aggregate",
+    highlights: "Investigative Reporting, Documentary Filmmaking, Digital Media Strategy, Developmental Journalism & Media Laws."
+  },
+
+  // Tourism Management
+  {
+    id: "crs_bba_tourism",
+    titleEn: "BBA in Tourism & Hospitality Management",
+    titleHi: "बीबीए पर्यटन एवं आतिथ्य प्रबंधन",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "tourism",
+    departmentEn: "Department of Tourism Management",
+    building: "Chaitanya / Chanakya Bhawan",
+    eligibility: "10+2 in any discipline with minimum 50% marks",
+    highlights: "Spiritual Tourism, Himalayan Trekking & Eco-Guiding, Hotel Operations, Ticketing (GDS) & Travel Agency Ops."
+  },
+
+  // Psychology
+  {
+    id: "crs_ba_psy",
+    titleEn: "B.A. (Hons) in Psychology",
+    titleHi: "बी.ए. (ऑनर्स) मनोविज्ञान",
+    degree: "Undergraduate (UG)",
+    duration: "3 Years (6 Semesters)",
+    departmentId: "psychology",
+    departmentEn: "Department of Psychology",
+    building: "Humanities Block",
+    eligibility: "10+2 in any stream with minimum 50% marks",
+    highlights: "General Psychology, Developmental Stages, Psychological Testing, Statistics & Applied Counseling."
+  },
+  {
+    id: "crs_ma_psy",
+    titleEn: "M.A. / M.Sc. in Clinical & Spiritual Psychology",
+    titleHi: "एम.ए. / एम.एससी. नैदानिक एवं आध्यात्मिक मनोविज्ञान",
+    degree: "Postgraduate (PG)",
+    duration: "2 Years (4 Semesters)",
+    departmentId: "psychology",
+    departmentEn: "Department of Psychology",
+    building: "Humanities Block",
+    eligibility: "Graduation with Psychology as a major subject with min 50% marks",
+    highlights: "Psychopathology, Clinical Assessment, Neuropsychology, Psychotherapy, Meditation Psychology & Hospital Internship."
   }
 ];
