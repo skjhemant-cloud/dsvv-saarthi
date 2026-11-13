@@ -1,6 +1,12 @@
 # DSVV Saarthi (देव संस्कृति विश्वविद्यालय सार्थी)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?style=for-the-badge&logo=githubpages&logoColor=white)](https://skjhemant-cloud.github.io/dsvv-saarthi/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/skjhemant-cloud/dsvv-saarthi)
+
 > **A zero-rupee student information and assistance platform for Dev Sanskriti Vishwavidyalaya, Haridwar.**
 > Built with React 18, Vite, and Tailwind CSS. Zero paid APIs, zero subscriptions, zero hosting fees.
+>
+> 🌐 **Live Website URL:** [https://skjhemant-cloud.github.io/dsvv-saarthi/](https://skjhemant-cloud.github.io/dsvv-saarthi/)
 
 ---
 
