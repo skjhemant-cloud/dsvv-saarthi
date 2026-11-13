@@ -13,7 +13,7 @@ export const FOUNDERS_DATA = {
       quote: "एक ऐसे शिक्षा संस्थान की आवश्यकता है जो विद्यार्थियों को केवल आजीविका नहीं, अपितु उदार, करुणामय, निस्वार्थ और प्रबुद्ध देवमानव के रूप में गढ़ सके — यह देवमानवों के निर्माण की टकसाल होगी।",
       quoteEn: "There is need for an educational institution which could mould its students into noble and enlightened human beings: selfless, warm-hearted, compassionate and kind — combining scientific temper with spiritual wisdom.",
       description: "Visionary saint, freedom fighter, and profound philosopher who pioneered the revival of Rishi traditions and the synthesis of science and spirituality, envisioning Dev Sanskriti Vishwavidyalaya as a global seat of cultural and moral renaissance.",
-      photo: "/assets/pt_shriram_sharma.jpg",
+      photo: "assets/pt_shriram_sharma.jpg",
       badge: "Inspirational Founder"
     },
     {
@@ -23,7 +23,7 @@ export const FOUNDERS_DATA = {
       quote: "मातृवत स्नेह, निस्वार्थ सेवा और साधना से ही जीवन में दिव्यता का अवतरण संभव है।",
       quoteEn: "Through motherly affection, selfless service, and disciplined inner sadhana, true divinity awakens in human life.",
       description: "Embodiment of maternal compassion, spiritual strength, and selfless sacrifice who nurtured the Gayatri Pariwar fraternity and guided thousands of students to embrace an ascetic lifestyle rooted in high ideals and character.",
-      photo: "/assets/mata_bhagwati_devi.jpg",
+      photo: "assets/mata_bhagwati_devi.jpg",
       badge: "Spiritual Pillar & Co-Founder"
     }
   ]

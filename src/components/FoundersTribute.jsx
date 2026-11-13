@@ -3,6 +3,13 @@ import { Sparkles, Quote, CheckCircle2 } from 'lucide-react';
 import { FOUNDERS_DATA } from '../data/seedData';
 
 export default function FoundersTribute({ lang }) {
+  const getPhotoUrl = (path) => {
+    if (!path) return '';
+    const cleanPath = path.replace(/^\.?\//, '');
+    const base = import.meta.env.BASE_URL || './';
+    return base.endsWith('/') ? `${base}${cleanPath}` : `${base}/${cleanPath}`;
+  };
+
   return (
     <section className="bg-gradient-to-b from-dsvv-blue-900 via-dsvv-blue-950 to-slate-900 text-white py-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-y-2 border-dsvv-gold-500/50">
       {/* Decorative subtle background aura */}
@@ -35,8 +42,12 @@ export default function FoundersTribute({ lang }) {
                 <div className="flex items-start gap-4">
                   <div className="relative shrink-0">
                     <img 
-                      src={founder.photo} 
+                      src={getPhotoUrl(founder.photo)} 
                       alt={founder.name} 
+                      onError={(e) => {
+                        const filename = founder.photo.split('/').pop();
+                        e.currentTarget.src = `./assets/${filename}`;
+                      }}
                       className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border-2 border-dsvv-gold-400 shadow-xl shadow-dsvv-gold-500/25 ring-2 ring-dsvv-gold-500/30"
                     />
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-dsvv-gold-500 text-dsvv-blue-950 flex items-center justify-center font-bold text-[10px]">
