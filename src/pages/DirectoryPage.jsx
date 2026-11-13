@@ -204,7 +204,7 @@ export default function DirectoryPage({ lang, onOpenReport }) {
                 </div>
               </div>
               <a 
-                href="https://maps.google.com/maps?q=Dev+Sanskriti+Vishwavidyalaya,+Shantikunj,+Haridwar" 
+                href="https://maps.google.com/maps?q=Dev+Sanskriti+Vishwavidyalaya,+Gayatrikunj,+Shantikunj,+Haridwar,+Uttarakhand+249411" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-dsvv-gold-500 hover:bg-dsvv-gold-400 text-dsvv-blue-950 text-xs font-bold transition-colors shadow-xs"
@@ -218,7 +218,7 @@ export default function DirectoryPage({ lang, onOpenReport }) {
             <div className="relative w-full" style={{ paddingBottom: '52%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full border-0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.3!2d78.145!3d29.955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390949f56e7acf7f%3A0x1ee1c1a68f498f4e!2sDev%20Sanskriti%20Vishwavidyalaya!5e1!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.757167733857!2d78.1905900764585!3d29.998147774936315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39094709e23297a7%3A0x3344682c3f918e5b!2sDev%20Sanskriti%20Vishwavidyalaya!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
