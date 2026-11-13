@@ -242,41 +242,50 @@ export default function HomePage({ setActiveTab, lang, onOpenReport }) {
 
             {todayMenu && todayMenu.meals ? (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Breakfast */}
-                <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-2xs">
+                {/* Campus Canteen / Breakfast */}
+                <div className="bg-white rounded-2xl p-4 border border-amber-300/80 shadow-2xs">
                   <div className="flex items-center justify-between text-xs mb-2">
-                    <span className="font-bold text-dsvv-blue-900 uppercase tracking-wider">Breakfast</span>
-                    <span className="text-[10px] text-slate-500">{todayMenu.meals.breakfast.timing}</span>
+                    <span className="font-bold text-amber-900 uppercase tracking-wider">Canteen Breakfast</span>
+                    <span className="text-[10px] text-slate-500">{todayMenu.meals.breakfastNote?.timing || "07:30 AM – 10:00 AM"}</span>
                   </div>
-                  <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                    {todayMenu.meals.breakfast.title}
+                  <h4 className="text-sm font-semibold text-slate-900 mb-1">
+                    Daily Fresh Sprouts & Snacks
                   </h4>
+                  <p className="text-[11px] text-amber-800 bg-amber-50 rounded-lg p-1.5 mb-2">
+                    🌱 Ankurit (₹15–20) • Hot Dishes (₹15–30)
+                  </p>
                   <ul className="text-xs text-slate-600 space-y-1">
-                    {todayMenu.meals.breakfast.items.slice(0, 3).map((it, i) => (
-                      <li key={i} className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-dsvv-gold-500 shrink-0"></span>
-                        <span className="truncate">{it}</span>
-                      </li>
-                    ))}
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                      <span className="truncate">Chole Bhature & Puri Aloo</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                      <span className="truncate">Veg Chow mein & Pani Puri</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                      <span className="truncate">Gulab Jamun & Laddoos (₹15)</span>
+                    </li>
                   </ul>
                 </div>
 
                 {/* Lunch */}
-                <div className="bg-white rounded-2xl p-4 border border-amber-300/80 shadow-xs relative">
+                <div className="bg-white rounded-2xl p-4 border border-dsvv-blue-300 shadow-xs relative">
                   <span className="absolute -top-2.5 right-4 bg-dsvv-gold-500 text-dsvv-blue-950 font-bold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full">
-                    Main Meal
+                    Maa Anandamayi
                   </span>
                   <div className="flex items-center justify-between text-xs mb-2">
-                    <span className="font-bold text-amber-900 uppercase tracking-wider">Lunch</span>
-                    <span className="text-[10px] text-slate-500">{todayMenu.meals.lunch.timing}</span>
+                    <span className="font-bold text-dsvv-blue-900 uppercase tracking-wider">Lunch</span>
+                    <span className="text-[10px] text-slate-500">{todayMenu.meals.lunch?.timing || "11:30 AM – 01:45 PM"}</span>
                   </div>
                   <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                    {todayMenu.meals.lunch.title}
+                    {todayMenu.meals.lunch?.title || "Sattvik Lunch"}
                   </h4>
                   <ul className="text-xs text-slate-600 space-y-1">
-                    {todayMenu.meals.lunch.items.slice(0, 3).map((it, i) => (
+                    {(todayMenu.meals.lunch?.items || []).slice(0, 3).map((it, i) => (
                       <li key={i} className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-dsvv-blue-900 shrink-0"></span>
                         <span className="truncate">{it}</span>
                       </li>
                     ))}
@@ -287,13 +296,13 @@ export default function HomePage({ setActiveTab, lang, onOpenReport }) {
                 <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-2xs">
                   <div className="flex items-center justify-between text-xs mb-2">
                     <span className="font-bold text-dsvv-blue-900 uppercase tracking-wider">Dinner</span>
-                    <span className="text-[10px] text-slate-500">{todayMenu.meals.dinner.timing}</span>
+                    <span className="text-[10px] text-slate-500">{todayMenu.meals.dinner?.timing || "07:00 PM – 08:30 PM"}</span>
                   </div>
                   <h4 className="text-sm font-semibold text-slate-900 mb-2">
-                    {todayMenu.meals.dinner.title}
+                    {todayMenu.meals.dinner?.title || "Sattvik Dinner"}
                   </h4>
                   <ul className="text-xs text-slate-600 space-y-1">
-                    {todayMenu.meals.dinner.items.slice(0, 3).map((it, i) => (
+                    {(todayMenu.meals.dinner?.items || []).slice(0, 3).map((it, i) => (
                       <li key={i} className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-dsvv-gold-500 shrink-0"></span>
                         <span className="truncate">{it}</span>
