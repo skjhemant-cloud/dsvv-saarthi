@@ -33,6 +33,7 @@ export default function MessMenuPage({ lang, onOpenReport }) {
   };
 
   const meals = currentMenu?.meals || {};
+  const canteen = currentMenu?.canteenMenu || null;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-fadeIn">
@@ -147,20 +148,25 @@ export default function MessMenuPage({ lang, onOpenReport }) {
         </div>
       </div>
 
-      {/* Meal Tabs Filter (All, Breakfast, Lunch, Dinner) */}
+      {/* Meal Tabs Filter (All, Canteen/Breakfast, Lunch, Dinner) */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          {['all', 'breakfast', 'lunch', 'dinner'].map((tab) => (
+          {[
+            { id: 'all', label: 'All Meals & Canteen' },
+            { id: 'canteen', label: 'Canteen & Breakfast' },
+            { id: 'lunch', label: 'Lunch (दोपहर)' },
+            { id: 'dinner', label: 'Dinner (संध्या)' }
+          ].map((tab) => (
             <button
-              key={tab}
-              onClick={() => setMealFilter(tab)}
+              key={tab.id}
+              onClick={() => setMealFilter(tab.id)}
               className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
-                mealFilter === tab
+                mealFilter === tab.id
                   ? 'bg-dsvv-blue-900 text-white shadow-sm'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              {tab === 'all' ? 'All Three Meals' : tab}
+              {tab.label}
             </button>
           ))}
         </div>
@@ -170,49 +176,86 @@ export default function MessMenuPage({ lang, onOpenReport }) {
         </div>
       </div>
 
+      {/* Note about Mess vs Canteen */}
+      <div className="bg-amber-50 border border-amber-300 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-amber-950">
+        <div className="flex items-center gap-2.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+          <div>
+            <strong>Campus Reality Note:</strong> Maa Anandamayi Bhojanalaya serves <strong>Lunch and Dinner</strong>. Breakfast is not served in the mess; students have healthy morning sprouts & snacks at the <strong>Campus Canteen (कैंटीन)</strong>.
+          </div>
+        </div>
+        <button 
+          onClick={() => setMealFilter('canteen')}
+          className="px-3 py-1 rounded-lg bg-amber-200/80 hover:bg-amber-300 text-amber-950 font-bold shrink-0 transition-colors"
+        >
+          View Canteen Menu →
+        </button>
+      </div>
+
       {/* Meals Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* 1. BREAKFAST */}
-        {(mealFilter === 'all' || mealFilter === 'breakfast') && meals.breakfast && (
-          <div className="bg-white rounded-3xl p-6 border-2 border-slate-200 hover:border-amber-400 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        {/* 1. CANTEEN & MORNING BREAKFAST */}
+        {(mealFilter === 'all' || mealFilter === 'canteen' || mealFilter === 'breakfast') && (
+          <div className="bg-white rounded-3xl p-6 border-2 border-amber-300 hover:border-amber-500 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider">
-                  Breakfast (प्रातः नाश्ता)
+                  Campus Canteen (प्रातः नाश्ता)
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs text-slate-500 font-medium">
                   <Clock size={13} className="text-amber-600" />
-                  {meals.breakfast.timing}
+                  07:30 AM – 10:00 AM
                 </span>
               </div>
 
               <h3 className="text-lg font-serif font-bold text-dsvv-blue-950 mb-1">
-                {lang === 'hi' && meals.breakfast.titleHi ? meals.breakfast.titleHi : meals.breakfast.title}
+                {lang === 'hi' ? 'दैनिक ताज़ा अंकुरित एवं नाश्ता' : 'Daily Fresh Sprouts & Morning Snacks'}
               </h3>
               <p className="text-xs text-slate-500 mb-4">
-                {meals.breakfast.titleHi}
+                Served at Campus Canteen (Maa Anandamayi mess does not serve breakfast)
               </p>
 
-              <div className="space-y-2 mb-6">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Menu Items:</p>
-                <ul className="space-y-2">
-                  {meals.breakfast.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-700 bg-slate-50 p-2 rounded-xl">
-                      <span className="w-1.5 h-1.5 rounded-full bg-dsvv-gold-500 mt-1.5 shrink-0"></span>
-                      <span className="font-medium">{item}</span>
-                    </li>
+              {/* Sprouts Special */}
+              <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-3 mb-4">
+                <div className="flex items-center justify-between text-xs font-bold text-emerald-900 mb-1">
+                  <span>🌱 Daily Morning Ankurit (अंकुरित)</span>
+                  <span className="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">₹15 – ₹20</span>
+                </div>
+                <p className="text-[11px] text-emerald-800">Fresh Moong, Kala Chana, lemon & mild chaat masala</p>
+              </div>
+
+              {/* Rotating Hot Dishes */}
+              <div className="space-y-2 mb-4">
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Daily Changing Hot Snacks:</p>
+                <div className="grid grid-cols-1 gap-1.5 text-xs text-slate-700">
+                  {(canteen?.dailyHotDishes || [
+                    { dish: "Chole Bhature (छोले भटूरे)", price: "₹30" },
+                    { dish: "Puri Aloo (पूरी आलू)", price: "₹25" },
+                    { dish: "Veg Chow mein (चाउमीन)", price: "₹25" },
+                    { dish: "Bhel Puri / Pani Puri", price: "₹20" }
+                  ]).map((item, idx) => (
+                    <div key={idx} className="flex items-center justify-between bg-slate-50 p-2 rounded-xl">
+                      <span className="font-medium">{item.dish}</span>
+                      <span className="font-bold text-dsvv-blue-900">{item.price}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
+              </div>
+
+              {/* Packaged Snacks & Sweets */}
+              <div className="space-y-1 text-[11px] text-slate-500 border-t border-slate-100 pt-3">
+                <p className="font-bold text-slate-600">Also in Stock:</p>
+                <p>Paper Boat, Gulab Jamun, Laddoos (₹15), Burgers, Pastries, Chips.</p>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-100 space-y-2">
+            <div className="pt-4 border-t border-slate-100 space-y-2 mt-4">
               <div className="bg-amber-50/70 border border-amber-200 rounded-xl p-2.5 text-xs text-amber-900">
-                <span className="font-bold">Chef Note:</span> {meals.breakfast.special}
+                <span className="font-bold">Location:</span> Central Campus Canteen
               </div>
               <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span className="text-emerald-700 font-semibold">✓ 100% Sattvik</span>
-                <span>Self Service</span>
+                <span className="text-amber-700 font-semibold">Self Paid Counter</span>
+                <span>07:30 AM – 08:00 PM</span>
               </div>
             </div>
           </div>

@@ -66,21 +66,20 @@ export const SEED_MESS_MENUS = [
     id: "mess_today",
     date: getDateStr(0),
     meals: {
-      breakfast: {
-        title: "Poha with Sprouts & Herbal Tea",
-        titleHi: "पौष्टिक पोहा, अंकुरित मूंग एवं क्वाथ (काढ़ा/हर्बल चाय)",
-        timing: "07:30 AM – 08:45 AM",
-        items: ["Indori Poha with Peanuts", "Boiled Moong Sprouts", "Fresh Lemon & Coriander", "Herbal Kadha / Warm Milk"],
-        isSattvik: true,
-        special: "Prepared with low oil & pure desi ghee"
+      breakfastNote: {
+        title: "Campus Canteen Breakfast (कैंटीन प्रातः नाश्ता)",
+        titleHi: "मेस में केवल दोपहर एवं संध्या भोजन बनता है। नाश्ता कैंटीन में मिलता है।",
+        timing: "07:30 AM – 10:00 AM",
+        canteenNotice: "Maa Anandamayi Bhojanalaya serves Lunch & Dinner only. Students have morning breakfast & snacks at the DSVV Campus Canteen.",
+        isCanteen: true
       },
       lunch: {
         title: "Panchmel Dal, Aloo Jeera & Seasonal Sabzi",
         titleHi: "पंचमेल दाल, जीरा आलू, मौसमी लौकी, चावल व ताज़ी रोटियां",
-        timing: "12:00 PM – 01:45 PM",
+        timing: "11:30 AM – 01:45 PM",
         items: ["Panchmel Mixed Dal", "Jeera Aloo", "Lauki Chana", "Steamed Basmati Rice", "Fresh Phulkas with Butter", "Kachumber Salad & Chaas (Buttermilk)"],
         isSattvik: true,
-        special: "Zero garlic and onion - 100% pure sattvik"
+        special: "Zero garlic and onion - 100% pure sattvik in Maa Anandamayi Bhojanalaya"
       },
       dinner: {
         title: "Moong Khichdi or Kadhi Chawal with Methi Sabzi",
@@ -88,32 +87,56 @@ export const SEED_MESS_MENUS = [
         timing: "07:00 PM – 08:30 PM",
         items: ["Traditional Rajasthani Kadhi", "Steamed Rice", "Methi Aloo dry sabzi", "Tawa Rotis", "Rice Kheer (Sweet)"],
         isSattvik: true,
-        special: "Light & digestive evening preparation"
+        special: "Light & digestive evening preparation in Maa Anandamayi Bhojanalaya"
       }
     },
+    canteenMenu: {
+      title: "Campus Canteen Daily Specials & Refreshments",
+      titleHi: "परिसर कैंटीन दैनिक नाश्ता एवं अल्पाहार",
+      timings: "07:30 AM – 08:00 PM",
+      morningSpecial: {
+        name: "Daily Morning Fresh Ankurit (अंकुरित / Healthy Sprouts)",
+        price: "₹15 – ₹20",
+        items: ["Fresh Moong Sprouts", "Kala Chana", "Lemon & Mild Chaat Masala", "Chopped Cucumber"]
+      },
+      dailyHotDishes: [
+        { dish: "Chole Bhature (छोले भटूरे)", price: "₹30" },
+        { dish: "Puri Aloo Sabzi (पूरी आलू)", price: "₹25" },
+        { dish: "Vegetable Chow mein (चाउमीन)", price: "₹25" },
+        { dish: "Bhel Puri & Sev Puri (भेल पूरी)", price: "₹20" },
+        { dish: "Pani Puri / Golgappe (पानी पूरी)", price: "₹20" }
+      ],
+      refreshmentsAndSweets: [
+        { item: "Gulab Jamun (ताज़ा गुलाब जामुन)", price: "₹15" },
+        { item: "Coconut & Besan Laddoo (नारियल व बेसन लड्डू)", price: "₹15" },
+        { item: "Veg Burger & Sandwich", price: "₹25 – ₹30" },
+        { item: "Pastries & Bakery Snacks", price: "₹25" },
+        { item: "Paper Boat Juices & Shakes", price: "MRP" },
+        { item: "Chips & Healthy Namkeen Packs", price: "MRP" }
+      ]
+    },
     verificationStatus: "verified",
-    verifiedBy: "Mess Supervisor & Student Editor",
+    verifiedBy: "Mess & Canteen Committee",
     lastUpdated: new Date().toLocaleDateString("en-IN")
   },
   {
     id: "mess_tomorrow",
     date: getDateStr(1),
     meals: {
-      breakfast: {
-        title: "Dalia with Nuts & Warm Milk",
-        titleHi: "नमकीन दलिया / मीठा दलिया, भुने चने व दूध",
-        timing: "07:30 AM – 08:45 AM",
-        items: ["Vegetable Multigrain Dalia", "Roasted Chana", "Fresh Seasonal Fruit", "Ayurvedic Herbal Kadha"],
-        isSattvik: true,
-        special: "High protein student energy meal"
+      breakfastNote: {
+        title: "Campus Canteen Breakfast (कैंटीन प्रातः नाश्ता)",
+        titleHi: "मेस में केवल दोपहर एवं संध्या भोजन बनता है। नाश्ता कैंटीन में मिलता है।",
+        timing: "07:30 AM – 10:00 AM",
+        canteenNotice: "Maa Anandamayi Bhojanalaya serves Lunch & Dinner only. Students have morning breakfast & snacks at the DSVV Campus Canteen.",
+        isCanteen: true
       },
       lunch: {
         title: "Rajma Masala, Aloo Gobi & Boondi Raita",
         titleHi: "राजमा, आलू गोभी, बूंदी रायता, चावल व फुल्के",
-        timing: "12:00 PM – 01:45 PM",
+        timing: "11:30 AM – 01:45 PM",
         items: ["Pahari Rajma", "Aloo Gobi dry", "Pudina Boondi Raita", "Jeera Rice", "Whole Wheat Rotis", "Green Salad"],
         isSattvik: true,
-        special: "100% Sattvik authentic Haridwar preparation"
+        special: "100% Sattvik authentic Haridwar preparation in Maa Anandamayi Bhojanalaya"
       },
       dinner: {
         title: "Lauki Kofta with Dal Tadka & Roti",
@@ -121,8 +144,33 @@ export const SEED_MESS_MENUS = [
         timing: "07:00 PM – 08:30 PM",
         items: ["Lauki Kofta Curry", "Yellow Arhar Dal Tadka", "Fresh Tawa Rotis", "Steamed Rice", "Gur (Jaggery)"],
         isSattvik: true,
-        special: "Wholesome and grounding"
+        special: "Wholesome and grounding in Maa Anandamayi Bhojanalaya"
       }
+    },
+    canteenMenu: {
+      title: "Campus Canteen Daily Specials & Refreshments",
+      titleHi: "परिसर कैंटीन दैनिक नाश्ता एवं अल्पाहार",
+      timings: "07:30 AM – 08:00 PM",
+      morningSpecial: {
+        name: "Daily Morning Fresh Ankurit (अंकुरित / Healthy Sprouts)",
+        price: "₹15 – ₹20",
+        items: ["Fresh Moong Sprouts", "Kala Chana", "Lemon & Mild Chaat Masala", "Chopped Cucumber"]
+      },
+      dailyHotDishes: [
+        { dish: "Puri Aloo Sabzi (पूरी आलू)", price: "₹25" },
+        { dish: "Chole Bhature (छोले भटूरे)", price: "₹30" },
+        { dish: "Vegetable Chow mein (चाउमीन)", price: "₹25" },
+        { dish: "Bhel Puri (भेल पूरी)", price: "₹20" },
+        { dish: "Pani Puri (पानी पूरी)", price: "₹20" }
+      ],
+      refreshmentsAndSweets: [
+        { item: "Gulab Jamun (ताज़ा गुलाब जामुन)", price: "₹15" },
+        { item: "Besan & Motichoor Laddoo (लड्डू)", price: "₹15" },
+        { item: "Veg Burger & Grilled Sandwich", price: "₹25 – ₹30" },
+        { item: "Fresh Pastries", price: "₹25" },
+        { item: "Paper Boat Traditional Drinks", price: "MRP" },
+        { item: "Chips & Snacks", price: "MRP" }
+      ]
     },
     verificationStatus: "verified",
     verifiedBy: "Mess In-charge",
@@ -781,16 +829,151 @@ export const SEED_CAMPUS_LOCATIONS = [
   {
     id: "loc_mess_hall",
     nameEn: "Maa Anandamayi Bhojanalaya (Student Dining Hall)",
-    nameHi: "माँ आनंदमयी भोजनालय (छात्र-छात्रा भोजन कक्ष)",
+    nameHi: "माँ आनंदमयी भोजनालय (दोपहर एवं संध्या छात्र भोजन कक्ष)",
     category: "facilities",
     categoryLabel: "Mess & Dining",
     building: "Maa Anandamayi Dining Complex",
     floor: "Ground & 1st Floor",
-    timings: "Breakfast: 7:30–8:45 AM | Lunch: 12:00–1:45 PM | Dinner: 7:00–8:30 PM",
-    description: "Spacious, highly hygienic dining hall named Maa Anandamayi Bhojanalaya serving 100% sattvik meals cooked with steam boilers and solar energy. Separate dining wings for male and female students.",
-    facilities: ["Filtered RO Drinking Water", "Handwash Sanitizing Stations", "Feedback Register", "Sattvik Pure Veg"],
+    timings: "Lunch: 11:30 AM – 01:45 PM | Dinner: 07:00 PM – 08:30 PM (No Breakfast served in mess)",
+    description: "Spacious, sacred dining hall named Maa Anandamayi Bhojanalaya serving 100% sattvik lunch and dinner cooked with solar steam boilers and pure desi ingredients. NOTE: Breakfast is NOT served in the mess; students get morning breakfast/snacks at the Campus Canteen.",
+    facilities: ["Filtered RO Drinking Water", "Handwash Sanitizing Stations", "100% Sattvik Lunch & Dinner", "Solar Steam Cooking"],
     directions: "Central location midway between academic buildings and hostel enclosures.",
     contact: "mess@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_canteen",
+    nameEn: "Campus Canteen (कैंटीन & Morning Breakfast Hub)",
+    nameHi: "विश्वविद्यालय कैंटीन (प्रातः नाश्ता, अंकुरित व अल्पाहार केंद्र)",
+    category: "facilities",
+    categoryLabel: "Canteen & Refreshments",
+    building: "Central Amenities Complex",
+    floor: "Ground Floor & Courtyard",
+    timings: "07:30 AM – 08:00 PM (Daily)",
+    description: "The primary breakfast and snack destination for students, faculty, and visitors. Serves fresh morning healthy Ankurit (sprouts), rotating daily hot snacks (Chole Bhature, Puri Aloo, Chow mein, Bhel Puri, Pani Puri at ₹15–₹30), cold beverages (Paper Boat, juices), packaged snacks, burgers, and sweets (Gulab Jamun, Laddoos).",
+    facilities: ["Morning Ankurit (Sprouts)", "Daily Rotating Hot Snacks", "Fresh Sweets (Gulab Jamun, Laddoos)", "Cold Drinks & Paper Boat", "Outdoor & Indoor Seating"],
+    directions: "Near the central lawn, between the administrative block and boys hostel path.",
+    contact: "canteen@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_stationery",
+    nameEn: "University Stationery, Student Forms & Xerox Store",
+    nameHi: "विश्वविद्यालय स्टेशनरी, छात्र प्रार्थना-पत्र एवं फोटोकॉपी केंद्र",
+    category: "facilities",
+    categoryLabel: "Student Amenities",
+    building: "Student Service Center",
+    floor: "Ground Floor",
+    timings: "08:30 AM – 06:30 PM",
+    description: "One-stop shop for academic essentials: notebooks, chart papers, scissors, pens, geometry tools, quick snacks (Maggi, biscuits). Crucially provides official blank student application forms / letterheads pre-addressed to Vice Chancellor (VC), Pro-Vice Chancellor (Pro-VC), and Registrar for leaves, permissions, and fee queries.",
+    facilities: ["High-speed Printing & Photocopying", "Official VC / Registrar Application Forms", "Academic & Chart Supplies", "Maggi & Quick Snacks"],
+    directions: "Adjacent to Central Student Amenities block near the main pathway.",
+    contact: "stationery@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_library_printing",
+    nameEn: "Central Library Printing & Digital Resource Desk",
+    nameHi: "केंद्रीय पुस्तकालय प्रिंटिंग व डिजिटल संसाधन पटल (सरदार पटेल भवन)",
+    category: "academic",
+    categoryLabel: "Printing & Library",
+    building: "Sardar Vallabhbhai Patel Bhawan (Central Library)",
+    floor: "First Floor, Digital Wing",
+    timings: "09:00 AM – 07:00 PM",
+    description: "Official campus printing service inside the Central Library for research papers, project reports, admit cards, and reference documents. High-speed duplex network laser printers available at subsidized student rates.",
+    facilities: ["Admit Card & Document Printing", "Color & B/W Photostats", "Digital Library Access", "Quiet Study Zone"],
+    directions: "Inside Sardar Vallabhbhai Patel Bhawan, 1st Floor Central Library Reference Section.",
+    contact: "library@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_gaushala",
+    nameEn: "DSVV Gaushala & Panchgavya Research Sanctuary",
+    nameHi: "देव संस्कृति गौशाला एवं पंचगव्य अनुसंधान केंद्र",
+    category: "cultural",
+    categoryLabel: "Holy Sanctuary & Dairy",
+    building: "DSVV Gaushala Complex",
+    floor: "Ground Eco-Sanctuary",
+    timings: "06:00 AM – 12:00 PM, 03:30 PM – 06:30 PM",
+    description: "Sacred indigenous cow sanctuary preserving indigenous Gir, Sahiwal, and Badri cow breeds. Supplies pure sattvik A2 milk and dairy to the university while conducting pioneering research in organic farming, Panchgavya medicine, and organic pest repellents.",
+    facilities: ["Indigenous Cow Conservation (Gir, Sahiwal, Badri)", "Gau Seva Opportunities", "Organic Manure & Bio-Pesticide Unit", "A2 Dairy Supply"],
+    directions: "Located at the verdant rear perimeter of the campus near the agricultural research fields.",
+    contact: "gaushala@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_baltic_centre",
+    nameEn: "Baltic Centre & International / AI Innovation Lab",
+    nameHi: "बाल्टिक केंद्र एवं अंतर्राष्ट्रीय संबंध तथा एआई (AI) अनुसंधान प्रकोष्ठ",
+    category: "academic",
+    categoryLabel: "International & AI Research",
+    building: "Chaitanya / Administrative International Wing",
+    floor: "2nd Floor",
+    timings: "09:30 AM – 05:30 PM",
+    description: "Center for Baltic Studies and International Relations fostering academic partnerships with universities across Latvia, Lithuania, Estonia, and Europe. Also houses collaborative research initiatives in Artificial Intelligence (AI) and indigenous knowledge systems.",
+    facilities: ["Baltic Cultural Archive", "International Exchange Desk", "AI & Machine Learning Workstations", "Video Conference Suite"],
+    directions: "Chaitanya Bhawan / Administrative annex, accessible via main east staircase.",
+    contact: "international@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_srijana",
+    nameEn: "Srijana – Student Creative Craft & Vocational Center",
+    nameHi: "सृजना (छात्र हस्तशिल्प, स्वरोजगार एवं रचनात्मक केंद्र)",
+    category: "facilities",
+    categoryLabel: "Vocational & Crafts",
+    building: "Srijana Vocational Pavilion",
+    floor: "Ground Floor Workshops",
+    timings: "09:00 AM – 05:00 PM",
+    description: "Vibrant vocational center encouraging self-reliance (Swavlamban) and traditional arts. Students learn and produce handmade paper, organic agarbatti, handmade textiles, pottery, and artistic handicrafts under the guidance of skilled artisans.",
+    facilities: ["Handmade Recycled Paper Unit", "Handloom & Textile Loom", "Aroma & Incense Making", "Exhibition & Sales Counter"],
+    directions: "Near the Rural Development and Swavlamban block.",
+    contact: "srijana@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_ironing",
+    nameEn: "Uniform Ironing & Laundry Room (प्रेस वाली दीदी)",
+    nameHi: "वस्त्र इस्त्री एवं लॉन्ड्री कक्ष (प्रेस करने वाली दीदी का कमरा)",
+    category: "facilities",
+    categoryLabel: "Student Amenities",
+    building: "Student Residential Enclave Service Corner",
+    floor: "Ground Floor Room",
+    timings: "07:00 AM – 01:00 PM, 03:00 PM – 07:00 PM",
+    description: "Dedicated on-campus ironing and clothes pressing room run by Press-wali Didi, ensuring students' formal mandatory white uniforms (kurta-pyjama, salwar-kameez, trousers) are crisply pressed and well-maintained at nominal student rates.",
+    facilities: ["Steam & Heavy Electric Ironing", "Uniform Starching & Pressing", "Quick Delivery System", "Nominal Student Rates"],
+    directions: "Located conveniently near the hostel access junction and residential quarters.",
+    contact: "hosteloffice@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_food_court",
+    nameEn: "Fruit & Vegetable Counter / Healthy Juice Corner",
+    nameHi: "फल एवं हरी सब्जी केंद्र (ताज़ा फल, नारियल पानी एवं जूस पटल)",
+    category: "facilities",
+    categoryLabel: "Fresh Fruits & Health",
+    building: "Commercial Amenities Court",
+    floor: "Open Plaza Kiosk",
+    timings: "08:00 AM – 07:30 PM",
+    description: "Dedicated campus fresh fruits and seasonal vegetables stall separate from the canteen and mess. Offers fresh seasonal fruits (apples, bananas, pomegranates, oranges), fresh mosambi/orange juices, coconut water, and raw salad items for health-conscious students.",
+    facilities: ["Fresh Seasonal Fruits", "Fresh Fruit Juices & Shakes", "Tender Coconut Water", "Daily Fresh Salad Greens"],
+    directions: "Situated right next to the Campus Canteen courtyard.",
+    contact: "amenities@dsvv.ac.in",
+    isVerified: true
+  },
+  {
+    id: "loc_book_binding",
+    nameEn: "Campus Book Binding & Thesis Production Center",
+    nameHi: "बुक बाइंडिंग एवं थीसिस/असाइनमेंट बाइंडिंग केंद्र",
+    category: "facilities",
+    categoryLabel: "Printing & Binding",
+    building: "Student Service Center (Next to Stationery)",
+    floor: "Ground Floor",
+    timings: "09:00 AM – 06:00 PM",
+    description: "Specialized student binding center providing spiral binding, soft thermal binding, and official golden-embossed hardbound thesis/dissertation binding for postgraduate (M.Sc., MCA, MJMC, MA) and Ph.D. submissions.",
+    facilities: ["Hardbound Golden Letter Thesis Binding", "Spiral & Comb Binding", "Project Report Lamination", "Document Trimming"],
+    directions: "Integrated into the Student Amenities complex beside the Stationery shop.",
+    contact: "binding@dsvv.ac.in",
     isVerified: true
   }
 ];

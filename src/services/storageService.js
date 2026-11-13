@@ -11,15 +11,15 @@ import {
 } from '../data/seedData';
 
 const STORAGE_KEYS = {
-  MESS: 'dsvv_saarthi_mess_v4',
-  PROCEDURES: 'dsvv_saarthi_procedures_v4',
-  LOCATIONS: 'dsvv_saarthi_locations_v4',
-  EVENTS: 'dsvv_saarthi_events_v4',
-  NOTICES: 'dsvv_saarthi_notices_v4',
-  REPORTS: 'dsvv_saarthi_reports_v4',
-  AUDIT_LOGS: 'dsvv_saarthi_audit_logs_v4',
-  FACULTY: 'dsvv_saarthi_faculty_v4',
-  COURSES: 'dsvv_saarthi_courses_v4',
+  MESS: 'dsvv_saarthi_mess_v5',
+  PROCEDURES: 'dsvv_saarthi_procedures_v5',
+  LOCATIONS: 'dsvv_saarthi_locations_v5',
+  EVENTS: 'dsvv_saarthi_events_v5',
+  NOTICES: 'dsvv_saarthi_notices_v5',
+  REPORTS: 'dsvv_saarthi_reports_v5',
+  AUDIT_LOGS: 'dsvv_saarthi_audit_logs_v5',
+  FACULTY: 'dsvv_saarthi_faculty_v5',
+  COURSES: 'dsvv_saarthi_courses_v5',
   CURRENT_USER: 'dsvv_saarthi_auth_user',
   ALL_USERS: 'dsvv_saarthi_users'
 };
