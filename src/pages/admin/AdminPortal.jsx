@@ -499,38 +499,44 @@ export default function AdminPortal({ lang }) {
           <span>Events & Contests</span>
         </button>
 
-        <button
-          onClick={() => setActiveAdminTab('reports')}
-          className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all relative ${
-            activeAdminTab === 'reports' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          <AlertTriangle size={14} />
-          <span>Student Reports</span>
-          {reports.filter(r => r.status === 'pending').length > 0 && (
-            <span className="w-2 h-2 rounded-full bg-rose-500"></span>
-          )}
-        </button>
+        {isMainAdmin && (
+          <button
+            onClick={() => setActiveAdminTab('reports')}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all relative ${
+              activeAdminTab === 'reports' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            <AlertTriangle size={14} />
+            <span>Student Reports</span>
+            {reports.filter(r => r.status === 'pending').length > 0 && (
+              <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+            )}
+          </button>
+        )}
 
-        <button
-          onClick={() => setActiveAdminTab('audit')}
-          className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
-            activeAdminTab === 'audit' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          <History size={14} />
-          <span>Audit Trail ({auditLogs.length})</span>
-        </button>
+        {isMainAdmin && (
+          <button
+            onClick={() => setActiveAdminTab('audit')}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
+              activeAdminTab === 'audit' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            <History size={14} />
+            <span>Audit Trail ({auditLogs.length})</span>
+          </button>
+        )}
 
-        <button
-          onClick={() => setActiveAdminTab('database')}
-          className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
-            activeAdminTab === 'database' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          <Database size={14} />
-          <span>Database & Backup</span>
-        </button>
+        {isMainAdmin && (
+          <button
+            onClick={() => setActiveAdminTab('database')}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
+              activeAdminTab === 'database' ? 'bg-dsvv-blue-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            <Database size={14} />
+            <span>Database & Backup</span>
+          </button>
+        )}
       </div>
 
       {/* ----------------- TAB 1: MESS MENU MANAGER ----------------- */}

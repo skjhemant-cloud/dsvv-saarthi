@@ -94,13 +94,13 @@ export default function Footer({ setActiveTab, onOpenReport, lang }) {
         </div>
 
         {/* Disclaimer & Copyright */}
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-3">
-          <p>
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-3 text-center md:text-left">
+          <p className="max-w-xl">
             DSVV Saarthi is a zero-budget student product built with React & Vite. Not an official endorsement unless authorized by university administration.
           </p>
-          <div className="flex items-center gap-1 text-slate-400">
+          <div className="inline-flex items-center justify-center flex-wrap gap-1.5 text-slate-400 font-medium text-xs">
             <span>Crafted with</span>
-            <Heart size={12} className="text-rose-500 fill-rose-500" />
+            <Heart size={14} className="text-rose-500 fill-rose-500 shrink-0 inline-block animate-pulse" />
             <span>for Dev Sanskriti Vishwavidyalaya Students</span>
           </div>
         </div>

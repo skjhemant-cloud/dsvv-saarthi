@@ -28,7 +28,11 @@ const SYNONYMS = {
   // Locations & Bhawans
   library: ['library', 'pustakalaya', 'books', 'kitab', 'reading room', 'patel bhawan', 'sardar vallabhbhai', 'study'],
   mandir: ['mandir', 'temple', 'mahakal', 'akhand deep', 'jyoti', 'aarti', 'puja', 'yagya', 'prarthana'],
-  admin: ['admin', 'office', 'karyalaya', 'registrar', 'dean', 'incharge', 'prashasan', 'enquiry', 'helpdesk'],
+  admin: ['admin', 'office', 'karyalaya', 'registrar', 'dean', 'incharge', 'prashasan', 'enquiry', 'helpdesk', 'vice chancellor', 'vc', 'pro vice chancellor', 'provc', 'pro vc', 'chinmay pandya', 'controller of examination', 'coe', 'pariksha niyantrak', 'accounts', 'finance'],
+  vc: ['vice chancellor', 'vc office', 'vc chamber', 'kulpati', 'kulpati karyalaya'],
+  provc: ['pro vice chancellor', 'provc', 'pro vc office', 'prati kulpati', 'chinmay pandya', 'chinmay bhaiya'],
+  registrar: ['registrar', 'registrar office', 'kul sachiv', 'kulsachiv', 'bonafide', 'endorsement'],
+  coe: ['coe', 'controller of examination', 'pariksha niyantrak', 'admit card', 'marksheet', 'grade card', 'result'],
   hostel: ['hostel', 'aawas', 'residence', 'room', 'gomti', 'kaveri', 'bhagirathi', 'warden'],
   bhawan: ['shriram bhawan', 'chaitanya bhawan', 'patel bhawan', 'sanskriti vibhag', 'mrityunjay', 'sabhagar'],
   lab: ['lab', 'animation', 'vfx', '3d', 'character design', 'shriram bhawan', 'computer', 'chaitanya bhawan', 'graphics', 'studio'],

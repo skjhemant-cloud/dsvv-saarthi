@@ -188,16 +188,121 @@ export default function DirectoryPage({ lang, onOpenReport }) {
 
       {/* VIEW 1: CAMPUS LOCATIONS */}
       {activeTab === 'locations' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredLocations.map(loc => (
-            <div 
-              key={loc.id}
-              className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
-            >
+        <div className="space-y-6">
+          {/* Visual Campus Interactive SVG Map Card */}
+          <div className="bg-gradient-to-br from-slate-900 via-dsvv-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl overflow-hidden relative">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <div>
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-dsvv-gold-600 bg-dsvv-gold-50 px-2.5 py-0.5 rounded-full">
+                <span className="px-3 py-1 rounded-full bg-dsvv-gold-500/20 text-dsvv-gold-300 text-xs font-bold uppercase tracking-wider border border-dsvv-gold-500/30">
+                  Interactive Campus Layout Guide
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mt-1">
+                  Dev Sanskriti Vishwavidyalaya Campus Map
+                </h3>
+                <p className="text-xs text-slate-400">
+                  Visual layout of prominent academic bhawans, administrative centers, dining, and holy landmarks.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-slate-300">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Active Campus Overview</span>
+              </div>
+            </div>
+
+            {/* SVG Visual Layout */}
+            <div className="bg-slate-950/80 rounded-2xl p-4 border border-slate-800 overflow-x-auto">
+              <svg viewBox="0 0 950 480" className="w-full min-w-[750px] h-auto select-none font-sans">
+                {/* Background Lawn & Pathways */}
+                <rect x="10" y="10" width="930" height="460" rx="16" fill="#0f172a" />
+                <path d="M 50 240 L 900 240" stroke="#334155" strokeWidth="20" strokeLinecap="round" />
+                <path d="M 475 40 L 475 440" stroke="#334155" strokeWidth="20" strokeLinecap="round" />
+
+                {/* Central Circle - Mahakal Mandir */}
+                <circle cx="475" cy="240" r="48" fill="#d97706" fillOpacity="0.2" stroke="#f59e0b" strokeWidth="3" />
+                <text x="475" y="235" textAnchor="middle" fill="#fef3c7" fontSize="13" fontWeight="bold">Mahakal Mandir</text>
+                <text x="475" y="252" textAnchor="middle" fill="#fde68a" fontSize="10">Akhand Jyoti</text>
+
+                {/* Main Entrance Gate */}
+                <g transform="translate(40, 205)">
+                  <rect width="100" height="70" rx="10" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+                  <text x="50" y="32" textAnchor="middle" fill="#e0f2fe" fontSize="11" fontWeight="bold">Main Entrance</text>
+                  <text x="50" y="48" textAnchor="middle" fill="#94a3b8" fontSize="9">Security & Gate</text>
+                </g>
+
+                {/* Shriram Bhawan (VC, Pro-VC, Animation, Reception) */}
+                <g transform="translate(170, 80)">
+                  <rect width="180" height="95" rx="12" fill="#1e3a8a" stroke="#60a5fa" strokeWidth="2.5" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="13" fontWeight="bold">Shriram Bhawan</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#93c5fd" fontSize="10">VC & Pro-VC Office • Reception</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#bfdbfe" fontSize="9.5">Animation & VFX Department</text>
+                  <rect x="15" y="72" width="150" height="15" rx="4" fill="#3b82f6" fillOpacity="0.3" />
+                  <text x="90" y="83" textAnchor="middle" fill="#dbeafe" fontSize="8.5">Executive & Creative Labs</text>
+                </g>
+
+                {/* Administrative Block (Registrar, COE, Accounts) */}
+                <g transform="translate(170, 300)">
+                  <rect width="180" height="90" rx="12" fill="#1e293b" stroke="#94a3b8" strokeWidth="2" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="bold">Administrative Block</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#cbd5e1" fontSize="10">Registrar • Accounts Desk</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#94a3b8" fontSize="9.5">Controller of Exams (COE)</text>
+                </g>
+
+                {/* Chaitanya Bhawan (CS/IT, Media, Baltic/AI) */}
+                <g transform="translate(385, 60)">
+                  <rect width="180" height="90" rx="12" fill="#1e293b" stroke="#a78bfa" strokeWidth="2" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="bold">Chaitanya Bhawan</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#c4b5fd" fontSize="10">CS & IT • BCA / MCA Labs</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#ddd6fe" fontSize="9.5">Media & Baltic AI Center</text>
+                </g>
+
+                {/* Maa Anandamayi Bhojanalaya & Campus Canteen */}
+                <g transform="translate(385, 330)">
+                  <rect width="180" height="90" rx="12" fill="#1e293b" stroke="#f59e0b" strokeWidth="2" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="bold">Dining & Canteen Zone</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#fde68a" fontSize="10">Maa Anandamayi Mess (Lunch/Dinner)</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#fef08a" fontSize="9.5">Campus Canteen • Fresh Sprouts</text>
+                </g>
+
+                {/* Sardar Patel & Yoga Bhawan (Library, Yogic Science & Public Therapies) */}
+                <g transform="translate(600, 80)">
+                  <rect width="180" height="95" rx="12" fill="#14532d" stroke="#4ade80" strokeWidth="2.5" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="bold">Sardar Patel Bhawan</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#86efac" fontSize="10">Central Library • Printing Hub</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#bbf7d0" fontSize="9.5">Dept of Yogic Science</text>
+                  <rect x="10" y="72" width="160" height="15" rx="4" fill="#16a34a" fillOpacity="0.4" />
+                  <text x="90" y="83" textAnchor="middle" fill="#dcfce7" fontSize="8.5">Public Holistic Therapy OPD</text>
+                </g>
+
+                {/* Mrityunjay Sabhagar */}
+                <g transform="translate(600, 300)">
+                  <rect width="180" height="90" rx="12" fill="#581c87" stroke="#c084fc" strokeWidth="2" />
+                  <text x="90" y="28" textAnchor="middle" fill="#ffffff" fontSize="12" fontWeight="bold">Mrityunjay Sabhagar</text>
+                  <text x="90" y="46" textAnchor="middle" fill="#e9d5ff" fontSize="10">Dev Sanskriti Convention Hall</text>
+                  <text x="90" y="62" textAnchor="middle" fill="#d8b4fe" fontSize="9.5">1500+ Seating Convocation Venue</text>
+                </g>
+
+                {/* Student Amenities Hub (Stationery, Srijana, Ironing) */}
+                <g transform="translate(805, 195)">
+                  <rect width="125" height="90" rx="10" fill="#1e293b" stroke="#f472b6" strokeWidth="2" />
+                  <text x="62" y="26" textAnchor="middle" fill="#ffffff" fontSize="11" fontWeight="bold">Amenities Hub</text>
+                  <text x="62" y="42" textAnchor="middle" fill="#fbcfe8" fontSize="9">Stationery & Forms</text>
+                  <text x="62" y="56" textAnchor="middle" fill="#f472b6" fontSize="9">Press Wali Didi</text>
+                  <text x="62" y="70" textAnchor="middle" fill="#cbd5e1" fontSize="8.5">Srijana & Gaushala</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredLocations.map(loc => (
+              <div 
+                key={loc.id}
+                className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-dsvv-gold-600 bg-dsvv-gold-50 px-2.5 py-0.5 rounded-full">
                       {loc.categoryLabel}
                     </span>
                     <h3 className="font-serif font-bold text-slate-900 text-lg mt-1 group-hover:text-dsvv-blue-900 transition-colors">
@@ -261,6 +366,7 @@ export default function DirectoryPage({ lang, onOpenReport }) {
             </div>
           ))}
         </div>
+      </div>
       )}
 
       {/* VIEW 2: COURSES & ACADEMIC PROGRAMS */}
